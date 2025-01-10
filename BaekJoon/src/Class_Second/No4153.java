@@ -7,7 +7,7 @@
     입력: 25 52 60
     출력: wrong
 */
-package bronze;
+package Class_Second;
 
 import java.io.BufferedReader;
 import java.io.IOException;
