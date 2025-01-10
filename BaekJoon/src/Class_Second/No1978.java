@@ -19,7 +19,6 @@ public class No1978 {
         int count = Integer.parseInt(br.readLine());
         int result = 0;
 
-
         if (count != 0) {
             int[] arr = new int[count];
             String[] nums = br.readLine().split(" ");
