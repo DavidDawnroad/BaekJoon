@@ -17,31 +17,32 @@ public class No1978 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int count = Integer.parseInt(br.readLine());
-        if (!(count == 0)) {
-            int stack = 0;
-            int result = 0;
+        int result = 0;
+
+
+        if (count != 0) {
             int[] arr = new int[count];
             String[] nums = br.readLine().split(" ");
 
             for (int i = 0; i < nums.length; i++) {
                 arr[i] = Integer.parseInt(nums[i]);
             }
-            // 소수 판별
             for (int i = 0; i < arr.length; i++) {
-                // input 이 무조건 1000 이하 자연수이므로 input = 0인 경우는 신경쓸 필요 없음
-                if (!(arr[i] == 1)) {
-                    for(int j = 2; j <= arr[i]; j++) {
-                        if (arr[i] % j == 0) {
-                            stack++;
-                        }
-                    }
-                    if (stack == 1) {
+                if (arr[i] > 1) {
+                    if (arr[i] == 2) {
                         result++;
-                        stack = 0;
+                    } else {
+                        for (int j = 2; j <= arr[i]; j++) {
+                            if (arr[i] % j == 0) {
+                                if (j == arr[i]) {
+                                    result++;
+                                } else break;
+                            }
+                        }
                     }
                 }
             }
-            System.out.print(result);
+            System.out.println(result);
         } else {
             System.out.print("0");
         }
