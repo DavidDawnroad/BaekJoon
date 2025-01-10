@@ -42,7 +42,7 @@ public class No1978 {
                     }
                 }
             }
-            System.out.println(result);
+            System.out.print(result);
         } else {
             System.out.print("0");
         }
